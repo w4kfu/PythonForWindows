@@ -6,3 +6,5 @@ doctrees
 .vscode/
 .cache/
 dist/
+build/
+PythonForWindows.egg-info/
