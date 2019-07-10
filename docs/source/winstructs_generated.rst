@@ -1076,6 +1076,37 @@ _CALLFRAMEINFO
 
         :class:`ULONG`
 
+tagBIND_OPTS
+''''''''''''
+.. class:: BIND_OPTS
+
+    Alias for :class:`tagBIND_OPTS`
+
+.. class:: LPBIND_OPTS
+
+    Pointer to :class:`tagBIND_OPTS`
+
+.. class:: tagBIND_OPTS
+
+    .. attribute:: cbStruct
+
+        :class:`DWORD`
+
+
+    .. attribute:: grfFlags
+
+        :class:`DWORD`
+
+
+    .. attribute:: grfMode
+
+        :class:`DWORD`
+
+
+    .. attribute:: dwTickCountDeadline
+
+        :class:`DWORD`
+
 _CALLFRAME_MARSHALCONTEXT
 '''''''''''''''''''''''''
 .. class:: CALLFRAME_MARSHALCONTEXT
@@ -1107,6 +1138,89 @@ _CALLFRAME_MARSHALCONTEXT
     .. attribute:: guidTransferSyntax
 
         :class:`GUID`
+
+_tagpropertykey
+'''''''''''''''
+.. class:: PROPERTYKEY
+
+    Alias for :class:`_tagpropertykey`
+
+.. class:: REFPROPERTYKEY
+
+    Pointer to :class:`_tagpropertykey`
+
+.. class:: _tagpropertykey
+
+    .. attribute:: fmtid
+
+        :class:`GUID`
+
+
+    .. attribute:: pid
+
+        :class:`DWORD`
+
+tagSTATSTG
+''''''''''
+.. class:: STATSTG
+
+    Alias for :class:`tagSTATSTG`
+
+.. class:: tagSTATSTG
+
+    .. attribute:: pwcsName
+
+        :class:`LPOLESTR`
+
+
+    .. attribute:: type
+
+        :class:`DWORD`
+
+
+    .. attribute:: cbSize
+
+        :class:`ULARGE_INTEGER`
+
+
+    .. attribute:: mtime
+
+        :class:`FILETIME`
+
+
+    .. attribute:: ctime
+
+        :class:`FILETIME`
+
+
+    .. attribute:: atime
+
+        :class:`FILETIME`
+
+
+    .. attribute:: grfMode
+
+        :class:`DWORD`
+
+
+    .. attribute:: grfLocksSupported
+
+        :class:`DWORD`
+
+
+    .. attribute:: clsid
+
+        :class:`CLSID`
+
+
+    .. attribute:: grfStateBits
+
+        :class:`DWORD`
+
+
+    .. attribute:: reserved
+
+        :class:`DWORD`
 
 tagSAFEARRAYBOUND
 '''''''''''''''''
@@ -4713,6 +4827,10 @@ _GUID
     Pointer to :class:`_GUID`
 
 .. class:: REFGUID
+
+    Pointer to :class:`_GUID`
+
+.. class:: LPCGUID
 
     Pointer to :class:`_GUID`
 
@@ -15968,6 +16086,8 @@ Simple types
 
 .. autoclass:: PCWSTR
 
+.. autoclass:: PZZWSTR
+
 .. autoclass:: SIZE_T
 
 .. class:: PSIZE_T
@@ -16240,6 +16360,8 @@ Simple types
 
 .. autoclass:: RPCOLEDATAREP
 
+.. autoclass:: SFGAOF
+
 .. autoclass:: WNDPROC
 
 .. autoclass:: LPPROC_THREAD_ATTRIBUTE_LIST
@@ -16346,6 +16468,111 @@ _ALPC_MESSAGE_INFORMATION_CLASS
 
     .. attribute:: AlpcMessageHandleInformation(3)
 
+_ACTIVATEOPTIONS
+''''''''''''''''
+.. class:: ACTIVATEOPTIONS
+
+    Alias for :class:`_ACTIVATEOPTIONS`
+
+
+.. class:: _ACTIVATEOPTIONS
+
+
+    .. attribute:: AO_NONE(0)
+
+
+    .. attribute:: AO_DESIGNMODE(1)
+
+
+    .. attribute:: AO_NOERRORUI(2)
+
+
+    .. attribute:: AO_NOSPLASHSCREEN(4)
+
+_PACKAGE_EXECUTION_STATE
+''''''''''''''''''''''''
+.. class:: PACKAGE_EXECUTION_STATE
+
+    Alias for :class:`_PACKAGE_EXECUTION_STATE`
+
+
+.. class:: _PACKAGE_EXECUTION_STATE
+
+
+    .. attribute:: PES_UNKNOWN(1)
+
+
+    .. attribute:: PES_RUNNING(2)
+
+
+    .. attribute:: PES_SUSPENDING(3)
+
+
+    .. attribute:: PES_SUSPENDED(4)
+
+
+    .. attribute:: PES_TERMINATED(5)
+
+_SIGDN
+''''''
+.. class:: SIGDN
+
+    Alias for :class:`_SIGDN`
+
+
+.. class:: _SIGDN
+
+
+    .. attribute:: SIGDN_NORMALDISPLAY(0)
+
+
+    .. attribute:: SIGDN_PARENTRELATIVEPARSING(2147581953)
+
+
+    .. attribute:: SIGDN_DESKTOPABSOLUTEPARSING(2147647488)
+
+
+    .. attribute:: SIGDN_PARENTRELATIVEEDITING(2147684353)
+
+
+    .. attribute:: SIGDN_DESKTOPABSOLUTEEDITING(2147794944)
+
+
+    .. attribute:: SIGDN_FILESYSPATH(2147844096)
+
+
+    .. attribute:: SIGDN_URL(2147909632)
+
+
+    .. attribute:: SIGDN_PARENTRELATIVEFORADDRESSBAR(2147991553)
+
+
+    .. attribute:: SIGDN_PARENTRELATIVE(2148007937)
+
+
+    .. attribute:: SIGDN_PARENTRELATIVEFORUI(2148089857)
+
+_SICHINTF
+'''''''''
+.. class:: SICHINTF
+
+    Alias for :class:`_SICHINTF`
+
+
+.. class:: _SICHINTF
+
+
+    .. attribute:: SICHINT_DISPLAY(0)
+
+
+    .. attribute:: SICHINT_ALLFIELDS(2147483648)
+
+
+    .. attribute:: SICHINT_CANONICAL(268435456)
+
+
+    .. attribute:: SICHINT_TEST_FILESYSPATH_IF_NOT_EQUAL(536870912)
+
 _CALLFRAME_COPY
 '''''''''''''''
 .. class:: CALLFRAME_COPY
@@ -16399,6 +16626,78 @@ tagCALLFRAME_WALK
 
 
     .. attribute:: CALLFRAME_WALK_OUT(4)
+
+_GETPROPERTYSTOREFLAGS
+''''''''''''''''''''''
+.. class:: GETPROPERTYSTOREFLAGS
+
+    Alias for :class:`_GETPROPERTYSTOREFLAGS`
+
+
+.. class:: _GETPROPERTYSTOREFLAGS
+
+
+    .. attribute:: GPS_DEFAULT(0)
+
+
+    .. attribute:: GPS_HANDLERPROPERTIESONLY(1)
+
+
+    .. attribute:: GPS_READWRITE(2)
+
+
+    .. attribute:: GPS_TEMPORARY(4)
+
+
+    .. attribute:: GPS_FASTPROPERTIESONLY(8)
+
+
+    .. attribute:: GPS_OPENSLOWITEM(16)
+
+
+    .. attribute:: GPS_DELAYCREATION(32)
+
+
+    .. attribute:: GPS_BESTEFFORT(64)
+
+
+    .. attribute:: GPS_NO_OPLOCK(128)
+
+
+    .. attribute:: GPS_PREFERQUERYPROPERTIES(256)
+
+
+    .. attribute:: GPS_EXTRINSICPROPERTIES(512)
+
+
+    .. attribute:: GPS_EXTRINSICPROPERTIESONLY(1024)
+
+
+    .. attribute:: GPS_MASK_VALID(2047)
+
+_SIATTRIBFLAGS
+''''''''''''''
+.. class:: SIATTRIBFLAGS
+
+    Alias for :class:`_SIATTRIBFLAGS`
+
+
+.. class:: _SIATTRIBFLAGS
+
+
+    .. attribute:: SIATTRIBFLAGS_AND(1)
+
+
+    .. attribute:: SIATTRIBFLAGS_OR(2)
+
+
+    .. attribute:: SIATTRIBFLAGS_APPCOMPAT(3)
+
+
+    .. attribute:: SIATTRIBFLAGS_MASK(3)
+
+
+    .. attribute:: SIATTRIBFLAGS_ALLITEMS(16384)
 
 _FILE_INFORMATION_CLASS
 '''''''''''''''''''''''

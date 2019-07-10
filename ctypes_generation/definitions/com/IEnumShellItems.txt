@@ -1,0 +1,38 @@
+typedef struct IEnumShellItemsVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IEnumShellItems * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IEnumShellItems * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IEnumShellItems * This);
+        
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Next )( 
+            IEnumShellItems * This,
+            /* [annotation][in] */ 
+            _In_  ULONG celt,
+            /* [annotation][length_is][size_is][out] */ 
+            _Out_writes_to_(celt, *pceltFetched)  IShellItem **rgelt,
+            /* [annotation][out] */ 
+            _Out_opt_ _Deref_out_range_(0, celt)  ULONG *pceltFetched);
+        
+        HRESULT ( STDMETHODCALLTYPE *Skip )( 
+            __RPC__in IEnumShellItems * This,
+            /* [in] */ ULONG celt);
+        
+        HRESULT ( STDMETHODCALLTYPE *Reset )( 
+            __RPC__in IEnumShellItems * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *Clone )( 
+            __RPC__in IEnumShellItems * This,
+            /* [out] */ __RPC__deref_out_opt IEnumShellItems **ppenum);
+        
+        END_INTERFACE
+    } IEnumShellItemsVtbl;
